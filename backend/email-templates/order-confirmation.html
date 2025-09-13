@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation - Pizza Delivery Pro</title>
+    <style>
+        body { 
+            font-family: 'Arial', sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background-color: #f4f4f4; 
+        }
+        .container { 
+            max-width: 600px; 
+            margin: 0 auto; 
+            background-color: #ffffff; 
+        }
+        .header { 
+            background: linear-gradient(135deg, #ff6b35, #f7931e); 
+            padding: 40px 20px; 
+            text-align: center; 
+        }
+        .header h1 { 
+            color: white; 
+            margin: 0; 
+            font-size: 32px; 
+        }
+        .content { 
+            padding: 30px; 
+        }
+        .order-summary { 
+            background-color: #f8f9fa; 
+            padding: 20px; 
+            border-radius: 10px; 
+            margin: 20px 0; 
+        }
+        .order-item { 
+            display: flex; 
+            justify-content: space-between; 
+            margin: 10px 0; 
+        }
+        .total { 
+            font-size: 18px; 
+            font-weight: bold; 
+            color: #ff6b35; 
+            border-top: 2px solid #ff6b35; 
+            padding-top: 15px; 
+        }
+        .status-bar { 
+            background: linear-gradient(to right, #28a745, #ffc107, #fd7e14, #dc3545); 
+            height: 6px; 
+            border-radius: 3px; 
+            margin: 20px 0; 
+        }
+        .footer { 
+            background-color: #333; 
+            color: white; 
+            padding: 30px; 
+            text-align: center; 
+        }
+        .btn { 
+            background-color: #ff6b35; 
+            color: white; 
+            padding: 15px 30px; 
+            text-decoration: none; 
+            border-radius: 25px; 
+            display: inline-block; 
+            font-weight: bold; 
+        }
+        .address-box {
+            background-color: #e7f3ff; 
+            padding: 20px; 
+            border-radius: 10px; 
+            border-left: 4px solid #007bff; 
+            margin: 20px 0;
+        }
+        @media (max-width: 600px) { 
+            .container { margin: 0; } 
+            .content { padding: 20px; } 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🍕 Pizza Delivery Pro</h1>
+            <p style="color: rgba(255,255,255,0.9); font-size: 18px; margin: 10px 0 0 0;">Order Confirmed!</p>
+        </div>
+        
+        <div class="content">
+            <h2 style="color: #333;">Hello {{customerName}}! 👋</h2>
+            <p style="font-size: 16px; line-height: 1.6; color: #555;">
+                Thank you for your order! We're excited to prepare your delicious pizza. 
+                Your order <strong>#{{orderNumber}}</strong> has been confirmed and our chefs are getting ready to work their magic.
+            </p>
+            
+            <div class="status-bar"></div>
+            
+            <div class="order-summary">
+                <h3 style="color: #ff6b35; margin-top: 0;">📋 Order Summary</h3>
+                <div style="margin-bottom: 15px;">
+                    <strong>Order Number:</strong> #{{orderNumber}}<br>
+                    <strong>Order Date:</strong> {{orderDate}}<br>
+                    <strong>Estimated Delivery:</strong> {{estimatedDelivery}}
+                </div>
+                
+                <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;">
+                
+                <h4 style="color: #333; margin-bottom: 15px;">🍕 Your Pizza Details:</h4>
+                <div class="order-item">
+                    <span><strong>Base:</strong> {{orderDetails.base}}</span>
+                </div>
+                <div class="order-item">
+                    <span><strong>Sauce:</strong> {{orderDetails.sauce}}</span>
+                </div>
+                <div class="order-item">
+                    <span><strong>Cheese:</strong> {{orderDetails.cheese}}</span>
+                </div>
+                <div class="order-item">
+                    <span><strong>Size:</strong> {{orderDetails.size}} ({{orderDetails.quantity}}x)</span>
+                </div>
+                
+                <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;">
+                
+                <div class="order-item total">
+                    <span>Total Amount:</span>
+                    <span>₹{{totalAmount}}</span>
+                </div>
+            </div>
+            
+            <div class="address-box">
+                <h4 style="color: #004085; margin-top: 0;">📍 Delivery Address:</h4>
+                <p style="margin: 0; color: #004085;">
+                    {{deliveryAddress.street}}<br>
+                    {{deliveryAddress.city}}, {{deliveryAddress.zipCode}}<br>
+                    📞 {{deliveryAddress.phone}}
+                </p>
+            </div>
+            
+            <div style="text-align: center; margin: 30px 0;">
+                <a href="{{trackingUrl}}" class="btn">Track Your Order 🔍</a>
+            </div>
+            
+            <p style="font-size: 14px; color: #666; text-align: center;">
+                Need help? Reply to this email or call us at <strong>+91-9876543210</strong>
+            </p>
+        </div>
+        
+        <div class="footer">
+            <h3 style="margin-top: 0;">🍕 Pizza Delivery Pro</h3>
+            <p style="margin: 10px 0;">Making the world's most delicious pizzas since 2025</p>
+            <p style="margin: 10px 0; font-size: 12px; opacity: 0.8;">
+                This email was sent to {{customerEmail}}. If you didn't place this order, please contact us immediately.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
