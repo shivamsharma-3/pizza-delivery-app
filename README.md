@@ -2,44 +2,44 @@
 
 A full-stack pizza delivery application built with the MERN stack, featuring real-time order tracking, payment integration, and separate admin/customer dashboards.
 
-## 🌟 Features
+# 🌟 Features
 
-### Customer Features
-- **User Registration & Authentication** - Secure JWT-based authentication
-- **Interactive Pizza Customizer** - Build custom pizzas with real-time pricing
-- **Order Management** - Place, track, and cancel orders
-- **Real-time Order Tracking** - Live status updates with progress indicators
-- **Payment Integration** - Razorpay payment gateway integration
-- **Order History** - View past orders and reviews
-- **Responsive Design** - Works perfectly on desktop and mobile
+## Customer Features
+- User Registration & Authentication - Secure JWT-based authentication
+- Interactive Pizza Customizer - Build custom pizzas with real-time pricing
+- Order Management - Place, track, and cancel orders
+- Real-time Order Tracking - Live status updates with progress indicators
+- Payment Integration - Razorpay payment gateway integration
+- Order History - View past orders and reviews
+- Responsive Design - Works perfectly on desktop and mobile
 
 ### Admin Features
-- **Admin Dashboard** - Comprehensive analytics and order management
-- **Order Management** - Update order status, view customer details
-- **Inventory Management** - Track ingredients and stock levels
-- **User Management** - View and manage customer accounts
-- **Email Notifications** - Automated order confirmations and updates
-- **Low Stock Alerts** - Get notified when ingredients are running low
+- Admin Dashboard - Comprehensive analytics and order management
+- Order Management - Update order status, view customer details
+- Inventory Management - Track ingredients and stock levels
+- User Management - View and manage customer accounts
+- Email Notifications - Automated order confirmations and updates
+- Low Stock Alerts - Get notified when ingredients are running low
 
 ## 🛠️ Tech Stack
 
 ### Backend
-- **Node.js** - Runtime environment
-- **Express.js** - Web framework
-- **MongoDB** - Database
-- **Mongoose** - ODM for MongoDB
-- **JWT** - Authentication
-- **Razorpay** - Payment processing
-- **Nodemailer** - Email notifications
-- **Handlebars** - Email templating
-- **bcryptjs** - Password hashing
+- Node.js - Runtime environment
+- Express.js - Web framework
+- MongoDB - Database
+- Mongoose - ODM for MongoDB
+- JWT - Authentication
+- Razorpay - Payment processing
+- Nodemailer - Email notifications
+- Handlebars - Email templating
+- bcryptjs - Password hashing
 
 ### Frontend
-- **React.js** - Frontend framework
-- **React Router** - Client-side routing
-- **Axios** - HTTP client
-- **Material-UI** - UI components
-- **CSS3** - Styling with gradients and animations
+- React.js - Frontend framework
+- React Router - Client-side routing
+- Axios - HTTP client
+- Material-UI - UI components
+- CSS3 - Styling with gradients and animations
 
 ## 📁 Project Structure
 
@@ -93,7 +93,7 @@ pizza-delivery-app/
 
 ### 1. Clone the Repository
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/shivamsharma-3/pizza-delivery-app
 cd pizza-delivery-app
 ```
 
@@ -114,11 +114,11 @@ cp .env.example .env
 ```env
 PORT=5000
 MONGODB_URI=mongodb://localhost:27017/pizzadelivery
-JWT_SECRET=your-super-secret-jwt-key-here
+JWT_SECRET=78e14ecf2729e0a00817c984fa898c91
 RAZORPAY_KEY_ID=your_razorpay_key_id
 RAZORPAY_KEY_SECRET=your_razorpay_key_secret
-EMAIL_USER=your.email@gmail.com
-EMAIL_PASSWORD=your-gmail-app-password
+EMAIL_USER=customer@test.com
+EMAIL_PASSWORD=password123
 ADMIN_EMAIL=admin@pizzadelivery.com
 FRONTEND_URL=http://localhost:3000
 ```
@@ -165,11 +165,11 @@ Frontend will run on `http://localhost:3000`
 
 ### Test Accounts
 
-**Admin Login:**
+Admin Login:
 - Email: `admin@pizzadelivery.com`
 - Password: `admin123`
 
-**Customer Login:**
+Customer Login:
 - Email: `customer@test.com`
 - Password: `password123`
 
@@ -210,13 +210,13 @@ Frontend will run on `http://localhost:3000`
 
 ### Running in Development Mode
 
-**Backend:**
+Backend:
 ```bash
 cd backend
 npm run dev  # Uses nodemon for auto-restart
 ```
 
-**Frontend:**
+Frontend:
 ```bash
 cd frontend
 npm start  # Hot reload enabled
@@ -224,7 +224,7 @@ npm start  # Hot reload enabled
 
 ### Useful Scripts
 
-**Backend:**
+Backend:
 ```bash
 npm run dev          # Start with nodemon
 npm start           # Start in production mode
@@ -232,7 +232,7 @@ node checkUsers.js  # List all users
 node checkDatabase.js # Check database connection
 ```
 
-**Frontend:**
+Frontend:
 ```bash
 npm start    # Development server
 npm build    # Production build
@@ -274,23 +274,23 @@ npm run build
 
 ### Common Issues
 
-1. **MongoDB Connection Error**
+1. MongoDB Connection Error
    ```bash
    # Make sure MongoDB is running
    sudo systemctl start mongod  # Linux
    brew services start mongodb  # macOS
    ```
 
-2. **Port Already in Use**
+2. Port Already in Use
    ```bash
    # Kill process on port 5000
    lsof -ti:5000 | xargs kill -9
    ```
 
-3. **CORS Issues**
+3. CORS Issues
    - Ensure `FRONTEND_URL` in backend `.env` matches frontend URL
 
-4. **Email Not Working**
+4. Email Not Working
    - Use Gmail app password, not regular password
    - Enable 2FA and generate app-specific password
 
@@ -310,8 +310,8 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 For support and questions:
 - Create an issue on GitHub
-- Email: support@pizzapro.com
-- Documentation: [Link to docs]
+- Email: shivamsharma4c@gmail.com
+- Documentation: https://github.com/shivamsharma-3/pizza-delivery-app
 
 ## 🎯 Roadmap
 
@@ -324,7 +324,7 @@ For support and questions:
 
 ---
 
-**Made with ❤️ and lots of 🍕**
+Made with ❤️ and lots of 🍕
 
 ---
 
